@@ -1,0 +1,195 @@
+.shopping-cart
+
+.cart-columns
+  display: flex
+  margin-top: 90px
+  padding-bottom: 20px
+  border-bottom: 1px solid $gray-border
+  //text-align: center
+  &__details
+    padding-left: 20px
+    //width: 29%
+    margin-right: 130px
+    &__h
+      color: #222222
+      font: 700 13px Lato
+      line-height: 20px
+      text-transform: uppercase
+  &__other
+    width: 11%
+    padding-left: 26px
+  &__h
+    color: #222222
+    font: 700 13px Lato
+    line-height: 20px
+    text-transform: uppercase
+    //width: 12%
+    //padding-left: 18px
+    margin-left: 90px
+
+.cart-product-box
+
+.cart-product-details
+  display: flex
+  width: 100%
+  padding-bottom: 20px
+  padding-top: 20px
+  border-bottom: 1px solid #eaeaea
+  &__img
+    height: 120px
+    width: 100px
+  &__text-box
+    margin-left: 21px
+  &__link
+    text-decoration: none
+  &__h
+    color: #222222
+    font: 400 13px Lato
+    text-transform: uppercase
+    padding-bottom: 38px
+    &:hover
+      color: $pink
+  &__p
+    color: #222222
+    font: 400 13px Lato
+  &__span
+    color: #6f6e6e
+
+.cart-product-other
+  text-align: center
+  width: 11%
+  padding-right: 70px
+  &__p
+    color: #656565
+    font: 400 13px Lato
+    margin: 48px 0 0 120px
+    //text-align: center
+  &__del
+    text-decoration: none
+    color: #656565
+    font: 400 13px Lato
+    margin: 48px auto
+    text-align: center
+  &__input
+    width: 50px
+    color: #656565
+    font: 400 13px Lato
+    text-align: center
+    outline: none
+
+.cart-buttons
+  margin-top: 44px
+  margin-bottom: 64px
+  display: flex
+  justify-content: space-around
+  &__button
+    padding: 20px 35px
+
+.cart-button
+  border: 1px solid #eaeaea
+  background-color: #ffffff
+  text-decoration: none
+  border-radius: 3px
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  transition: all 300ms ease
+  &:hover
+    color: #fff
+    background-color: #4a4a4a
+    border: 1px solid #4a4a4a
+    transition: all 300ms ease
+
+.cart-forms
+  margin-bottom: 70px
+  display: flex
+  justify-content: space-between
+
+.cart-checkout-form
+  width: $width/3 - 32
+  &__h
+    margin-bottom: 20px
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__country
+    width: $width/3 - 30
+    padding: 16px 18px
+    border: 1px solid $gray-border
+    margin-bottom: 20px
+    color: #b1b1b1
+    outline: none
+    option
+      color: #b1b1b1
+  &__input
+    padding: 16px 18px
+    width: $width/3 - 68
+    border: 1px solid $gray-border
+    margin-bottom: 20px
+    outline: none
+    &::placeholder
+      color: #b1b1b1
+  &__button
+    padding: 10px
+
+
+.cart-discount-form
+  width: $width/3 - 30
+  &__h
+    margin-bottom: 20px
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__p
+    margin-bottom: 20px
+    color: #000000
+    font-size: 14px
+    font-weight: 300
+  &__code
+    padding: 16px 18px
+    width: $width/3 - 68
+    border: 1px solid $gray-border
+    margin-bottom: 20px
+    outline: none
+    &::placeholder
+      color: #b1b1b1
+  &__button
+    padding: 10px
+
+.cart-cost
+  height: 214px
+  width: $width/3 - 30
+  background-color: #f5f3f3
+  text-align: right
+  &__text-box
+    margin: 40px 40px 0
+    padding-bottom: 20px
+    border-bottom: 1px solid $gray-border
+  &__p
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 400
+    text-transform: uppercase
+    padding-bottom: 14px
+  &__h
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__price
+    color: #f16d7f
+  &__button-box
+    margin: 20px 40px 0
+  &__button
+    display: block
+    padding: 20px 0
+    text-align: center
+    color: #ffffff
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+
+

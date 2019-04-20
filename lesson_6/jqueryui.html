@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+    <style>
+        #draggable, #resizable{
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+            border: 1px solid blue;
+        }
+        #parent-draggable{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+        }
+        #droppable{
+            width: 400px;
+            height: 300px;
+            border: 1px solid gray;
+        }
+        #product, #product1{
+            width: 200px;
+            height: 100px;
+            background-color: bisque;
+        }
+        #feedback { font-size: 1.4em; }
+        #selectable .ui-selecting { background: #FECA40; }
+        #selectable .ui-selected { background: #F39814; color: white; }
+        #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+    </style>
+</head>
+<body>
+<div id="parent-draggable">
+    <div id="draggable"></div>
+</div>
+<button id="btn1">Получить containment</button>
+<button id="btn2">Удалить containment</button>
+<button id="btn3">Назначить containment</button>
+<hr>
+<button id="btn4">Enable</button>
+<button id="btn5">Disable</button>
+<button id="btn6">Destroy</button>
+<h2>Droppable</h2>
+<div id="product" data-id="123">Notebook</div>
+<div id="product1" data-id="124">Mouse</div>
+<div id="droppable"></div>
+<hr>
+<div id="resizable"></div>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>Date: <input type="text" id="datepicker"></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<ol id="selectable">
+    <li class="ui-widget-content">Item 1</li>
+    <li class="ui-widget-content">Item 2</li>
+    <li class="ui-widget-content">Item 3</li>
+    <li class="ui-widget-content">Item 4</li>
+    <li class="ui-widget-content">Item 5</li>
+    <li class="ui-widget-content">Item 6</li>
+    <li class="ui-widget-content">Item 7</li>
+</ol>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(() => {
+        $('#draggable').draggable({
+            // axis: 'x' // 'y' - ограничение оси перемещения
+            // revert: true // Возвращение элемента на место
+            // containment: 'parent' // ограничение по ближайшему родителю
+            containment: '#parent-draggable' // ограничение по селектору родителя
+        });
+
+
+        // getters & setters
+        $('#btn1').on('click', () => {
+            //Getter
+            console.log($('#draggable').draggable('option', 'containment'));
+        });
+        $('#btn2').on('click', () => {
+            //Setter
+            console.log($('#draggable').draggable('option', 'containment', false));
+        });
+        $('#btn3').on('click', () => {
+            //Setter
+            console.log($('#draggable').draggable('option', 'containment', 'parent'));
+        });
+
+        // actions
+        $('#btn4').on('click', () => {
+            $('#draggable').draggable('enable');
+        });
+        $('#btn5').on('click', () => {
+            $('#draggable').draggable('disable');
+        });
+        $('#btn6').on('click', () => {
+            $('#draggable').draggable('destroy');
+        });
+
+        // Drag & Drop
+        $('#product').draggable();
+        $('#product1').draggable();
+
+        $('#droppable').droppable({
+            drop: (event, ui) => {
+                console.log(event, ui);
+                console.log($(ui.draggable[0]).attr('data-id'));
+                // TODO: cart.addProduct(id)
+            }
+        })
+
+        //Resizable
+        $('#resizable').resizable({
+            // containment
+            // animate: true
+            // maxHeight: 500,
+            // maxWidth: 600
+        });
+
+        $( "#selectable" ).selectable();
+
+        $( "#datepicker" ).datepicker({
+            firstDay: 1,
+            // dayNamesMin: ['Вс', 'Пн', ....]
+            // monthNames: ['Январь', 'Февраль' ....]
+            dateFormat: 'dd.mm.yyyy'
+        });
+    })
+</script>
+</body>
+</html>

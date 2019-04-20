@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    ul {
+      display: flex;
+      justify-content: center;
+      background-color: gray;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: block;
+      position: relative;
+    }
+    ul:after {
+      display: block;
+      content: ' ';
+      clear: both;
+      float: none;
+    }
+
+    .menu > li > .menu__link:hover {
+      background-color: black;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      width: 120px;
+      top: 32px;
+      left: -1px;
+      background-color: white;
+      border: 1px solid black;
+      z-index: 10;
+    }
+    .submenu > li {
+      display: block;
+    }
+    .submenu > li > .menu__link {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+    .submenu > li > .menu__link:hover {
+      text-decoration: underline;
+    }
+    .menu > li:hover > .submenu {
+      display: block;
+    }
+    .submenu > li:hover > .submenu {
+      display: block;
+    }
+    .menu__link {
+      display: block;
+      padding: 10px;
+      color: white;
+      background-color: gray;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div id="menu-block"></div>
+<script src="lesson1.js"></script>
+<script src="MenuItem.js"></script>
+<script src="Menu.js"></script>
+<script src="SubMenu.js"></script>
+<script>
+  window.onload = () => {
+    // DOM ready
+    let menuBlock = document.getElementById('menu-block');
+
+    let menu = new Menu('my', 'menu', [
+      new MenuItem('/', 'Home', 'menu__link'),
+      new SubMenu('me', 'submenu', 'menu__link', '/blog', 'Blog',[
+        new MenuItem('/', 'Home', 'menu__link'),
+        new MenuItem('/blog', 'Blog', 'menu__link'),
+        new MenuItem('/services', 'Services', 'menu__link')
+      ]),
+      new SubMenu('me', 'submenu', 'menu__link', '/services', 'Services',[
+        new MenuItem('/', 'Home', 'menu__link'),
+        new MenuItem('/blog', 'Blog', 'menu__link'),
+        new MenuItem('/services', 'Services', 'menu__link')
+      ]),
+      new SubMenu('me', 'submenu', 'menu__link', '/someSub', 'SubMenu',[
+        new MenuItem('/', 'Home', 'menu__link'),
+        new MenuItem('/blog', 'Blog', 'menu__link'),
+        new SubMenu('me', 'submenu', 'menu__link', '/someSub2', 'SubMenu2',[
+          new MenuItem('/', 'Home', 'menu__link'),
+          new MenuItem('/blog', 'Blog', 'menu__link'),
+          new MenuItem('/services', 'Services', 'menu__link')
+        ])
+      ]),
+      new SubMenu('me', 'submenu', 'menu__link', '/someMenu', 'someMenu',[
+        new MenuItem('/', 'Home', 'menu__link'),
+        new MenuItem('/blog', 'Blog', 'menu__link'),
+        new MenuItem('/services', 'Services', 'menu__link')
+      ]),
+    ]);
+    menuBlock.innerHTML = menu.render();
+
+    //.getElementById('delete').addEventListener('click', () => menu.remove().remove());
+
+  }
+</script>
+</body>
+</html>

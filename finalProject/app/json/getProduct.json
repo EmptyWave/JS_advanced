@@ -1,0 +1,226 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Mango People T-shirt 1",
+    "price": 52,
+    "img": "img/fetured_item_1.jpg",
+    "min_img": "img/fetured_item_1.jpg"
+  },
+  {
+    "id_product": 2,
+    "product_name": "Mango People T-shirt 2",
+    "price": 52,
+    "img": "img/fetured_item_2.jpg",
+    "min_img": "img/fetured_item_2.jpg"
+  },
+  {
+    "id_product": 3,
+    "product_name": "Mango People T-shirt 3",
+    "price": 52,
+    "img": "img/fetured_item_3.jpg",
+    "min_img": "img/fetured_item_3.jpg"
+  },
+  {
+    "id_product": 4,
+    "product_name": "Mango People T-shirt 4",
+    "price": 52,
+    "img": "img/fetured_item_4.jpg",
+    "min_img": "img/fetured_item_4.jpg"
+  },
+  {
+    "id_product": 5,
+    "product_name": "Mango People T-shirt 5",
+    "price": 52,
+    "img": "img/fetured_item_5.jpg",
+    "min_img": "img/fetured_item_5.jpg"
+  },
+  {
+    "id_product": 6,
+    "product_name": "Mango People T-shirt 6",
+    "price": 52,
+    "img": "img/fetured_item_6.jpg",
+    "min_img": "img/fetured_item_6.jpg"
+  },
+  {
+    "id_product": 7,
+    "product_name": "Mango People T-shirt 7",
+    "price": 52,
+    "img": "img/fetured_item_7.jpg",
+    "min_img": "img/fetured_item_7.jpg"
+  },
+  {
+    "id_product": 8,
+    "product_name": "Mango People T-shirt 8",
+    "price": 52,
+    "img": "img/fetured_item_8.jpg",
+    "min_img": "img/fetured_item_8.jpg"
+  },
+  {
+    "id_product": 9,
+    "product_name": "Mango People T-shirt 9",
+    "price": 52,
+    "img": "img/fetured_item_1.jpg",
+    "min_img": "img/fetured_item_1.jpg"
+  },
+  {
+    "id_product": 10,
+    "product_name": "Mango People T-shirt 10",
+    "price": 52,
+    "img": "img/fetured_item_2.jpg",
+    "min_img": "img/fetured_item_2.jpg"
+  },
+  {
+    "id_product": 11,
+    "product_name": "Mango People T-shirt 11",
+    "price": 52,
+    "img": "img/fetured_item_3.jpg",
+    "min_img": "img/fetured_item_3.jpg"
+  },
+  {
+    "id_product": 12,
+    "product_name": "Mango People T-shirt 12",
+    "price": 52,
+    "img": "img/fetured_item_4.jpg",
+    "min_img": "img/fetured_item_4.jpg"
+  },
+  {
+    "id_product": 13,
+    "product_name": "Mango People T-shirt 13",
+    "price": 52,
+    "img": "img/fetured_item_5.jpg",
+    "min_img": "img/fetured_item_5.jpg"
+  },
+  {
+    "id_product": 14,
+    "product_name": "Mango People T-shirt 14",
+    "price": 52,
+    "img": "img/fetured_item_6.jpg",
+    "min_img": "img/fetured_item_6.jpg"
+  },
+  {
+    "id_product": 15,
+    "product_name": "Mango People T-shirt 15",
+    "price": 52,
+    "img": "img/fetured_item_7.jpg",
+    "min_img": "img/fetured_item_7.jpg"
+  },
+  {
+    "id_product": 16,
+    "product_name": "Mango People T-shirt 16",
+    "price": 52,
+    "img": "img/fetured_item_8.jpg",
+    "min_img": "img/fetured_item_8.jpg"
+  },
+  {
+    "id_product": 17,
+    "product_name": "Mango People T-shirt 17",
+    "price": 52,
+    "img": "img/fetured_item_1.jpg",
+    "min_img": "img/fetured_item_1.jpg"
+  },
+  {
+    "id_product": 18,
+    "product_name": "Mango People T-shirt 18",
+    "price": 52,
+    "img": "img/fetured_item_2.jpg",
+    "min_img": "img/fetured_item_2.jpg"
+  },
+  {
+    "id_product": 19,
+    "product_name": "Mango People T-shirt 19",
+    "price": 52,
+    "img": "img/fetured_item_3.jpg",
+    "min_img": "img/fetured_item_3.jpg"
+  },
+  {
+    "id_product": 20,
+    "product_name": "Mango People T-shirt 20",
+    "price": 52,
+    "img": "img/fetured_item_4.jpg",
+    "min_img": "img/fetured_item_4.jpg"
+  },
+  {
+    "id_product": 21,
+    "product_name": "Mango People T-shirt 21",
+    "price": 52,
+    "img": "img/fetured_item_5.jpg",
+    "min_img": "img/fetured_item_5.jpg"
+  },
+  {
+    "id_product": 22,
+    "product_name": "Mango People T-shirt 22",
+    "price": 52,
+    "img": "img/fetured_item_6.jpg",
+    "min_img": "img/fetured_item_6.jpg"
+  },
+  {
+    "id_product": 23,
+    "product_name": "Mango People T-shirt 23",
+    "price": 52,
+    "img": "img/fetured_item_7.jpg",
+    "min_img": "img/fetured_item_7.jpg"
+  },
+  {
+    "id_product": 24,
+    "product_name": "Mango People T-shirt 24",
+    "price": 52,
+    "img": "img/fetured_item_8.jpg",
+    "min_img": "img/fetured_item_8.jpg"
+  },
+  {
+    "id_product": 25,
+    "product_name": "Mango People T-shirt 25",
+    "price": 52,
+    "img": "img/fetured_item_1.jpg",
+    "min_img": "img/fetured_item_1.jpg"
+  },
+  {
+    "id_product": 26,
+    "product_name": "Mango People T-shirt 26",
+    "price": 52,
+    "img": "img/fetured_item_2.jpg",
+    "min_img": "img/fetured_item_2.jpg"
+  },
+  {
+    "id_product": 27,
+    "product_name": "Mango People T-shirt 27",
+    "price": 52,
+    "img": "img/fetured_item_3.jpg",
+    "min_img": "img/fetured_item_3.jpg"
+  },
+  {
+    "id_product": 28,
+    "product_name": "Mango People T-shirt 28",
+    "price": 52,
+    "img": "img/fetured_item_4.jpg",
+    "min_img": "img/fetured_item_4.jpg"
+  },
+  {
+    "id_product": 29,
+    "product_name": "Mango People T-shirt 29",
+    "price": 52,
+    "img": "img/fetured_item_5.jpg",
+    "min_img": "img/fetured_item_5.jpg"
+  },
+  {
+    "id_product": 30,
+    "product_name": "Mango People T-shirt 30",
+    "price": 52,
+    "img": "img/fetured_item_6.jpg",
+    "min_img": "img/fetured_item_6.jpg"
+  },
+  {
+    "id_product": 31,
+    "product_name": "Mango People T-shirt 31",
+    "price": 52,
+    "img": "img/fetured_item_7.jpg",
+    "min_img": "img/fetured_item_7.jpg"
+  },
+  {
+    "id_product": 32,
+    "product_name": "Mango People T-shirt 32",
+    "price": 52,
+    "img": "img/fetured_item_8.jpg",
+    "min_img": "img/fetured_item_8.jpg"
+  }
+]

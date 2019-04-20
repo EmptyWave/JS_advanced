@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Your name<input type="text" id="fetch"></label>
+<button id="getbtn" type="submit">Get result</button>
+<script>
+    window.onload = () => {
+        let btn = document.getElementById('getbtn');
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            let request = 'error.json';
+            if (document.getElementById('fetch').value){
+                request = 'success.json'
+            }
+            fetch(request)
+                .then(result => result.json())
+                .then(data => console.log(data.result))
+        })
+    }
+</script>
+</body>
+</html>

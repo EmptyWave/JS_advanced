@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .wrapper2{
+        display: flex;
+        margin-top: 100px;
+      }
+      .wrapper .active {
+        color: red;
+        border-bottom: 1px solid white;
+        background: white;
+      }
+      .wrapper2 .active {
+        color: #5c5c5c;
+        border-right: 1px solid #ffee86;
+        background: #ffee86;
+      }
+      .tabs{
+        margin-left: 1em;
+      }
+      .tab_horizontal,
+      .tab_vertical{
+        width: 100px;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: .5em 1em;
+        position: relative;
+        z-index: 2;
+      }
+      .tab_horizontal{
+        border-radius: 3px 3px 0 0;
+        display: inline-block;
+        margin-bottom: -1px;
+        background: #c8c8c8;
+      }
+      .tab_vertical{
+        border-radius: 3px 0 0 3px;
+        display: block;
+        margin: 0 -1px .1em;
+        background: #5c5c5c;
+          color: #ffee86;
+      }
+      .tab_item{
+        padding: 10px;
+        min-height: 150px;
+        border: 1px solid black;
+        width: 50%;
+      }
+      .wrapper2 .tab_item{
+        background: #ffee86;
+        color: #5c5c5c;
+      }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="tabs">
+        <span class="tab_horizontal">Вкладка 1</span>
+        <span class="tab_horizontal">Вкладка 2</span>
+        <span class="tab_horizontal">Вкладка 3</span>
+    </div>
+    <div class="tab_content">
+        <div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa debitis doloribus eveniet inventore magnam repellendus. Eos itaque praesentium similique!</div>
+        <div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, dolorem, reprehenderit. At blanditiis possimus quam sed. Atque aut autem dolore doloremque ducimus enim et eum hic, ipsum iste modi mollitia natus repellat sapiente veniam vitae.</div>
+        <div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur deleniti dignissimos impedit placeat possimus similique. Adipisci corporis delectus ducimus eveniet incidunt iusto repellat! Doloremque, reiciendis, suscipit!</div>
+    </div>
+</div>
+<div class="wrapper2">
+    <div class="tabs">
+        <span class="tab_vertical">Вкладка 1</span>
+        <span class="tab_vertical">Вкладка 2</span>
+        <span class="tab_vertical">Вкладка 3</span>
+    </div>
+    <div class="tab_content">
+        <div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa debitis doloribus eveniet inventore magnam repellendus. Eos itaque praesentium similique!</div>
+        <div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, dolorem, reprehenderit. At blanditiis possimus quam sed. Atque aut autem dolore doloremque ducimus enim et eum hic, ipsum iste modi mollitia natus repellat sapiente veniam vitae.</div>
+        <div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur deleniti dignissimos impedit placeat possimus similique. Adipisci corporis delectus ducimus eveniet incidunt iusto repellat! Doloremque, reiciendis, suscipit!</div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script  src="Tabs.js"></script>-->
+<script>
+
+  const settings = {
+    wrapper: {
+      containerClassName: '.wrapper',
+      tabsContainerClassName: '.tabs',
+      tabClassName: '.tab_horizontal',
+      activeTabClassName: 'active',
+      tabContentClassName: '.tab_item',
+      activeTabContentClassName: 'active_tab',
+    },
+    wrapper2:{
+      containerClassName: '.wrapper2',
+      tabsContainerClassName: '.tabs',
+      tabClassName: '.tab_vertical',
+      activeTabClassName: 'active',
+      tabContentClassName: '.tab_item',
+      activeTabContentClassName: 'active_tab',
+    },
+  };
+
+  function initTabs(tabSettings){
+    $(`${tabSettings.containerClassName} ${tabSettings.tabClassName}:first`).addClass(tabSettings.activeTabClassName);
+    $(`${tabSettings.containerClassName} ${tabSettings.tabContentClassName}:first`).addClass("active_tab");
+    $(`${tabSettings.containerClassName} ${tabSettings.tabContentClassName}`).not(":first").hide();
+    $(`${tabSettings.containerClassName} ${tabSettings.tabClassName}`).click(function() {
+      $(`${tabSettings.containerClassName} ${tabSettings.tabClassName}`).removeClass(tabSettings.activeTabClassName)
+        .eq($(this).index()).addClass(tabSettings.activeTabClassName);
+      $(`${tabSettings.containerClassName} ${tabSettings.tabContentClassName}`).hide().eq($(this).index()).fadeIn();
+    });
+  }
+
+  window.onload = () => {
+    for (let key in settings) {
+      initTabs(settings[key]);
+    }
+      /*$(".wrapper .tab:first").addClass("active");
+      $(".wrapper2 .tab:first").addClass("active");
+      $(".wrapper .tab_item:first").addClass("active_tab");
+      $(".wrapper2 .tab_item:first").addClass("active_tab");
+      $(".wrapper .tab_item").not(":first").hide();
+      $(".wrapper2 .tab_item").not(":first").hide();
+
+      $(".wrapper .tab").click(function() {
+        $(".wrapper .tab").removeClass("active")
+          .eq($(this).index()).addClass("active");
+        $(".wrapper .tab_item").hide().eq($(this).index()).fadeIn();
+      });
+      $(".wrapper2 .tab").click(function() {
+        $(".wrapper2 .tab").removeClass("active")
+          .eq($(this).index()).addClass("active");
+        $(".wrapper2 .tab_item").hide().eq($(this).index()).fadeIn();
+      });*/
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .orange{
+            background-color: orange;
+            color: white;
+        }
+        .strong{
+            color: rebeccapurple;
+            font-weight: bold;
+            font-size: 5em;
+        }
+    </style>
+</head>
+<body>
+<p id="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ex, necessitatibus provident quis quisquam
+    recusandae repellendus sit velit. Accusamus at dolor dolorem itaque libero maiores neque nesciunt pariatur quibusdam
+    sunt.</p>
+<p>Accusantium, amet, blanditiis consequuntur, culpa cum eos et illum obcaecati praesentium qui repellat totam
+    voluptate. Architecto consequatur dignissimos dolorem ea eius exercitationem ipsam odit quas quasi quia,
+    reprehenderit vitae voluptate?</p>
+<p class="text">Animi expedita illo laboriosam ratione reprehenderit? Accusamus accusantium aliquid at consequatur dolor dolorem ea
+    earum et eum exercitationem harum inventore nam neque officiis quae qui sequi, totam veritatis vitae voluptates.</p>
+<p>Adipisci architecto at commodi consequatur, delectus deserunt dolores ducimus eos, expedita facilis fuga hic in iure
+    iusto laudantium natus neque non nostrum porro provident quo quos ratione recusandae sequi voluptatem!</p>
+<p class="text">Amet animi dignissimos, doloremque, eligendi enim error expedita explicabo nihil quaerat reprehenderit, repudiandae
+    similique vitae voluptates? Ab aspernatur corporis eveniet laborum libero numquam officia unde veritatis vitae
+    voluptas! In, tenetur!</p>
+<p>Fugit in molestias odit perferendis repellendus suscipit tenetur voluptatibus? Alias corporis quos sapiente
+    voluptatibus! Architecto consectetur debitis ducimus eius magni natus nemo, nulla placeat quibusdam quo temporibus
+    velit voluptates. Eveniet!</p>
+<p class="text">Accusantium amet beatae dolor dolore laboriosam, neque omnis optio. Autem consequatur corporis earum, eos harum
+    nesciunt ratione? Corporis deleniti eum fugit ipsa laboriosam nesciunt quae sequi tempora, tempore tenetur
+    ullam.</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="expand">
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio earum eos fugiat perferendis sit! Animi
+        delectus deserunt eos ipsum libero molestiae nam neque nesciunt perspiciatis quas, tenetur, totam, unde
+        voluptatum.</p>
+</div>
+<button class="show-btn">Показать</button>
+<button class="hide-btn">Скрыть</button>
+<button class="toggle-btn">Переключатель</button>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="ajax-data"></div>
+<button class="ajax-get">Get data</button>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<input type="text" class="phone">
+<script src="jquery.min.js"></script>
+<script src="jquery.mask.min.js"></script>
+<script>
+    // console.log(jQuery, $);
+
+    //window.onload
+
+    //IIFE
+    // Всегда $ соответствуе jquery
+    // (($) => {
+    //     $(() => {
+    //
+    //     });
+    // })(jQuery);
+
+
+    // $(() => {
+    //
+    // });
+
+    //Вариант на jquery
+    $(document).ready(() => {
+        $('p').addClass('orange');
+        $('#text1').css('color', 'red');
+        // $('.text').css('font-size', '2em').css('text-decoration', 'underline')
+        $('.text').css({
+            color: 'blue',
+            fontSize: '3em'
+        });
+
+        //Выбор по индексу элемента
+        $('p').eq(3).addClass('strong');
+        //Второй вариант - работат быстрее
+        $('p:eq(4)').addClass('strong');
+        // $('p:last').addClass('strong');
+        // $('p:first').addClass('strong');
+
+        //Пербор элементов
+        $('p').each((index, item) => {
+            console.log(index, item);
+            //item.classList.add('orange') //VanillaJS
+            $(item).addClass('strong'); // jQuery
+        });
+
+        //Работа с событиями
+        let $expand = $('.expand');
+        let $btnShow = $('.show-btn');
+        let $btnHide = $('.hide-btn');
+        let $btnToggle = $('.toggle-btn');
+
+        // $btnShow.click()
+        // $btnShow.keyup()
+
+        // $gallery.on('click', 'img', () => {})
+
+        $btnShow.on('click', () => {
+            // $expand.show();
+            // $expand.slideDown(3000);
+            $expand.fadeIn(3000);
+        });
+        $btnHide.on('click', () => {
+            // $expand.hide();
+            // $expand.slideUp(3000);
+            $expand.fadeOut(3000);
+        });
+        $btnToggle.on('click', () => {
+            // $expand.toggle();
+            // $expand.slideToggle(3000);
+            $expand.fadeToggle(3000);
+        });
+
+        // AJAX
+        let $ajaxData = $('.ajax-data');
+        let $ajaxBtn = $('.ajax-get');
+
+        $ajaxBtn.on('click', () => {
+            $.ajax({
+                url: 'user.json',
+                type: 'GET',
+                // async: false - синхронный запрос
+                dataType: 'json',
+                success: (data) => {
+                    for (let person of data){
+                        let $user = $(`<p>${person.name} - <strong>${person.tel}</strong></p>`);
+                        $ajaxData.append($user);
+                    }
+                },
+                error: (error) => {
+                    console.log(error);
+                }
+            })
+        });
+
+
+        // input mask
+        $('.phone').mask('+7 (000) 000-00-00');
+    });
+</script>
+</body>
+</html>

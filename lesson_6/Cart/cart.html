@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #cart{
+            max-width: 400px;
+        }
+        .cart-item{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 10px 0;
+        }
+        .cart-item:not(:first-child){
+            border-top: 1px solid black;
+        }
+        .cart-items-wrap{
+            margin: 20px 0;
+        }
+        .cart-summary{
+            text-align: right;
+        }
+        .product-quantity{
+            text-align: center;
+        }
+        .product-price{
+            text-align: right;
+        }
+        #products{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        p{
+            margin: 0 0 5px 0;
+        }
+        .desc{
+            padding: 15px;
+            border: 1px solid #c0c0c040;
+        }
+        .product{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+</head>
+<body>
+<div id="cart"></div>
+<hr>
+<div id="products"></div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="Product.js"></script>
+<script src="Cart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

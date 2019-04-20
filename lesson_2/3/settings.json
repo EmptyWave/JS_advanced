@@ -1,0 +1,15 @@
+[
+  {"previewSelector": ".galleryPreviewsContainer"},
+  {"openedImagePrevButtonClass": "galleryWrapper__prev"},
+  {"openedImagePrevButtonSrc": "images/gallery/arrow-left.png"},
+  {"openedImageNextButtonClass": "galleryWrapper__next"},
+  {"openedImageNextButtonSrc": "images/gallery/arrow-right.png"},
+  {"openedImageWrapperClass": "galleryWrapper"},
+  {"openedImageClass": "galleryWrapper__image"},
+  {"openedImageScreenClass": "galleryWrapper__screen"},
+  {"openedImageCloseBtnClass": "galleryWrapper__close"},
+  {"openedImageCloseBtnSrc": "images/gallery/close.png"},
+  {"openedImageErr404": "images/gallery/404.jpg"},
+  {"blockToOpenGallery": "gallery"},
+  {"openedGalleryLinks": "gallery.json"}
+]

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="p1"></div>
+<div id="p2"></div>
+<script src="Validator.js"></script>
+<script>
+
+  window.onload = () => {
+    let validator1 = new Validator('p1','texttoreplace.txt','replace',/'/g,' ');
+    let validator2 = new Validator('p2','texttoreplace.txt','replace',/\B'/g,'');
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <style>
+        #cart{
+            max-width: 262px;
+        }
+        .cart-item{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 10px 0;
+        }
+        .cart-item:not(:first-child){
+            border-top: 1px solid black;
+        }
+        .cart-items-wrap{
+            margin: 20px 0;
+            max-height: 512px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .cart-summary{
+            text-align: right;
+        }
+        .product-quantity{
+            text-align: center;
+        }
+        .product-price{
+            text-align: right;
+        }
+        #products{
+            width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        p{
+            margin: 0 0 5px 0;
+        }
+        .desc{
+            padding: 15px;
+            border: 1px solid #c0c0c040;
+        }
+        .product{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .delBtn{
+            margin-left: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div id="cart"></div>
+<hr>
+<div id="products"></div>
+<script src="jquery-3.3.1.js"></script>
+<script src="Product.js"></script>
+<script src="Cart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+

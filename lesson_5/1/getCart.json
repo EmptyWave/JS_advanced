@@ -1,0 +1,20 @@
+{
+  "amount": 116,
+  "countGoods": 2,
+  "contents": [
+    {
+      "id_product": 1,
+      "product_name": "MANGO PEOPLE T-SHIRT 1",
+      "price": 58,
+      "quantity": 1,
+      "min_img": "https://placehold.it/72x85"
+    },
+    {
+      "id_product": 2,
+      "product_name": "MANGO PEOPLE T-SHIRT 2",
+      "price": 58,
+      "quantity": 1,
+      "min_img": "https://placehold.it/72x85"
+    }
+  ]
+}

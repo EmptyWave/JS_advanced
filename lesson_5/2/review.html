@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-
+beta.3/css/bootstrap.min.css" integrity="sha384-
+Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <style>
+    .form-wrap {
+      margin: auto;
+      padding: 20px;
+    }
+
+    .form-review {
+      height: 200px;
+    }
+
+    .form-wrap {
+      display: flex;
+    }
+
+    .btn-row {
+      justify-content: space-evenly;
+    }
+
+    .my-btn {
+      width: 30%;
+    }
+
+    .form-btn {
+      margin: 10px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 15px
+    }
+
+    h5 {
+      padding-left: 15px
+    }
+
+    .review-box,
+    .review,
+    .review-check-box {
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #757575;
+      padding: 10px;
+    }
+
+    .review-box {
+      background: #ffdab7;
+    }
+
+    .review {
+      background: #fff8c1;
+    }
+
+    .review-check-box {
+      background: #d0d0d0;
+    }
+
+  </style>
+</head>
+<body>
+<div class="form-wrap">
+  <div class="form-group col-md-4">
+    <h3>Оставить отзыв</h3>
+    <form class="my-form review-box" action="">
+      <label for="author">Author:</label>
+      <input type="text" name="author" class="form-control" id="author" placeholder="Author" autofocus required>
+      <label for="review">Review:</label>
+      <textarea name="review" id="review" class="form-control" rows="5"
+                id="userReview" placeholder="Review" required></textarea>
+      <button type="submit" class="btn btn-primary my-btn form-btn addBtn">Отправить</button>
+    </form>
+  </div>
+  <div class="form-group col-md-4">
+    <h3>Отзывы</h3>
+    <div class="review-list">
+      <!--<div class="review">
+        <h5>Маша Петрова</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iure natus reprehenderit vel velit!
+          Architecto autem consectetur eligendi harum ipsum iusto obcaecati odit perspiciatis possimus temporibus. Ab
+          accusantium, amet aut blanditiis delectus dolorem doloremque eligendi ex impedit nemo nisi nostrum quibusdam,
+          quidem quisquam repudiandae, sapiente sunt unde voluptatum. Alias aliquam deleniti nam nihil quidem
+          temporibus, vitae? At enim eos necessitatibus repellat. Alias aliquam aspernatur dolor minus officia,
+          praesentium quis ratione? A adipisci autem corporis cupiditate deserunt distinctio dolor ea, enim et fugiat
+          harum inventore laboriosam laborum nihil nisi obcaecati, porro quas quia quod recusandae rem repellat
+          reprehenderit soluta tempore voluptate!</p>
+        <button type="button" class="btn btn-danger my-btn">Удалить</button>
+      </div>
+      -->
+    </div>
+  </div>
+  <div class="form-group col-md-4">
+    <h3>Проверка отзывов</h3>
+    <div class="review-check-list">
+<!--      <div class="review-check-box">
+        <h5>Маша Петрова</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque placeat quod sint! Architecto,
+          asperiores corporis cumque deserunt dignissimos doloremque ea eveniet facere id illo iste libero magni
+          molestiae neque omnis possimus quaerat quidem repellendus tempore voluptates. Accusantium amet autem beatae
+          delectus dicta dolorum enim eos, eveniet fugiat id labore magni nihil provident quae quas rem repellat
+          repellendus reprehenderit similique suscipit totam unde velit vero voluptate voluptatibus! Accusamus ad
+          adipisci aperiam debitis doloribus facere, libero maiores sunt ut! Asperiores consectetur, deleniti
+          dignissimos error exercitationem illum laboriosam minus neque nostrum odit ratione repellat voluptatum! Error
+          natus odio quidem ratione repellat sit.</p>
+        <div class="form-row btn-row">
+          <button type="button" class="btn btn-success my-btn">Подтвердить</button>
+          <button type="button" class="btn btn-danger my-btn">Отказать</button>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>
+<script src="jquery-3.3.1.js"></script>
+<script src="Review.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

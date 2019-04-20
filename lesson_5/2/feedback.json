@@ -1,0 +1,25 @@
+[
+  {"id": 1, "author": "Ann", "text": "some text", "isApproved": true},
+  {"id": 2, "author": "Ann", "text": "some text", "isApproved": true},
+  {"id": 3, "author": "Ann", "text": "some text", "isApproved": true},
+  {"id": 4, "author": "Ann", "text": "some text", "isApproved": true},
+  {
+    "id": 5,
+    "author": "Маша Петрова",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque placeat quod sint!",
+    "isApproved": true
+  },
+  {
+    "id": 6,
+    "author": "Маша Петрова",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque placeat quod sint!",
+    "isApproved": false
+  },
+  {
+    "id": 7,
+    "author": "Маша Петрова",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque placeat quod sint!",
+    "isApproved": false
+  }
+
+]

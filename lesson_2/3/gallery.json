@@ -1,0 +1,8 @@
+[
+  {"src": "images/min/1.jpg", "data-full_image_url":"images/max/1.jpg", "alt": "Some alt1"},
+  {"src": "images/min/2.jpg", "data-full_image_url":"images/max/2.jpg", "alt": "Some alt2"},
+  {"src": "images/min/3.jpg", "data-full_image_url":"images/max/3.jpg", "alt": "Some alt3"},
+  {"src": "images/min/4.jpg", "data-full_image_url":"images/max/4.jpg", "alt": "Some alt4"},
+  {"src": "images/min/1.jpg", "data-full_image_url":"images/max/1.jpg", "alt": "Some alt5"},
+  {"src": "images/min/2.jpg", "data-full_image_url":"images/max/2.jpg", "alt": "Some alt6"}
+]

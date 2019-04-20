@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-
+beta.3/css/bootstrap.min.css" integrity="sha384-
+Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <style>
+    .form-wrap {
+      margin: auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+    .city-drop{
+      max-height: 200px;
+    }
+
+    .input__ok {
+      border: 1px solid green;
+    }
+
+    .input__err {
+      border: 1px solid red;
+    }
+    .ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+<div class="form-wrap">
+  <form class="my-form" action="">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input type="text" name="name" class="form-control" placeholder="Имя" autofocus>
+      </div>
+      <div class="form-group col-md-6">
+        <input type="text" name="surname" class="form-control" placeholder="Фамилия">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <input type="text" name="patronymic" class="form-control" placeholder="Отчество">
+      </div>
+      <div class="form-group col-md-4">
+        <input type="text" id="date" name="date" class="form-control" placeholder="Дата рождения">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input type="text" name="city" class="form-control form-city" placeholder="Город">
+      </div>
+      <div class="form-group col-md-6">
+        <input type="text" name="phone" class="form-control" placeholder="Телефон">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <input type="email" name="email" class="form-control" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <textarea name="text" class="form-control" rows="3" placeholder="Комментарий"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+    <div class="form-row">
+      <div id="errorDialog"></div>
+    </div>
+  </form>
+</div>
+<script src="Validator.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="datepicker-ru.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
